@@ -1,0 +1,111 @@
+// importing necessary libraries
+import java.awt.*;
+import java.awt.event.*;
+// Our class extends Frame class and implements ActionListener interface
+public class TextFieldExample21 extends Frame implements ActionListener {
+// creating instances of TextField and Button class
+TextField tf1, tf2, tf3,tf4,tf5,tf6,tf7,tf8,tf9;
+Label l, l1 ,l2 ,l3,l4,l5,l6,l7,l8,l9;
+Button b1;
+// instantiating using constructor
+TextFieldExample21() {
+// instantiating objects of text field and button
+// setting position of components in frame
+l=new Label(" Employee Salary Sheet Generator ");
+l.setBounds(100,50,300,20 );
+l1=new Label("Enter Name ");
+l1.setBounds(250,100,150,20 );
+l2=new Label("Basic Salary ");
+l2.setBounds(250,150,150,20 );
+l3=new Label("Enter HRA ");
+l3.setBounds(250,200,150,20 );
+l4=new Label("Enter DA ");
+l4.setBounds(250,250,150,20 );
+l5=new Label("Enter TA ");
+l5.setBounds(250,300,150,20 );
+l6=new Label("Enter INSURANCE ");
+l6.setBounds( 250,350,150,20);
+l7=new Label(" Enter PF");
+l7.setBounds(250,400,150,20 );
+l8=new Label(" GROSS Salary ");
+l8.setBounds( 250,500,150,20);
+l9=new Label("Net Salary ");
+l9.setBounds(250,550,150,20 );
+tf1= new TextField(10);
+tf1.setBounds(450,100,100,20);
+tf2= new TextField(10);
+tf2.setBounds(450,150,100,20);
+tf3= new TextField(10);
+tf3.setBounds(450,200,100,20);
+tf4= new TextField(10);
+tf4.setBounds(450,250,100,20);
+tf5= new TextField(10);
+tf5.setBounds(450,300,100,20);
+tf6= new TextField(10);
+tf6.setBounds(450,350,100,20);
+tf7= new TextField(10);
+tf7.setBounds(450,400,100,20);
+tf8= new TextField(10);
+tf8.setBounds(450,500,100,20);
+tf9= new TextField(10);
+tf9.setBounds(450,550,100,20);
+b1=new Button("Details");
+Frame(Project)
+Thursday, October 7, 2021 2:45 AM
+b1.setBounds(250,425,100,50);
+// adding action listener
+b1.addActionListener(this);
+// adding components to frame
+add(l); add(l1);
+add(l2); add(l3);
+add(l4); add(l5);
+add(l6); add(l7);
+add(l8); add(l9);
+add(tf1);
+add(tf2);
+add(tf3);
+add(tf4);
+add(tf5);
+add(tf6);
+add(tf7);
+add(tf8);
+add(tf9);
+add(b1);
+// setting size, layout and visibility of frame
+setSize(900,900);
+setLayout(null);
+setVisible(true);
+repaint();
+}
+// defining the actionPerformed method to generate an event on buttons
+public void actionPerformed(ActionEvent e) {
+String s2= tf2.getText();
+String s3= tf3.getText();
+String s4= tf4.getText();
+String s5= tf5.getText();
+String s6= tf6.getText();
+String s7= tf7.getText();
+int b=Integer.parseInt(s2);
+int c=Integer.parseInt(s3);
+int d=Integer.parseInt(s4);
+int h=Integer.parseInt(s5);
+int f=Integer.parseInt(s6);
+int g=Integer.parseInt(s7);
+int z=0;
+if(e.getSource()==b1)
+{
+z=b+c+d+f;
+}
+else if(e.getSource()==b1)
+{
+z=(b+c+d+f)-(g+b);
+}
+String result=String.valueOf(z);
+tf8.setText(result);
+tf9.setText(result);
+}
+// main method
+public static void main(String[] args) {
+new TextFieldExample21();
+}
+}
